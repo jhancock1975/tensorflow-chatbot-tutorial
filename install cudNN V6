@@ -1,2 +1,10 @@
 browse to https://developer.nvidia.com/cudnn
 click download, click log in
+(see cuDNN-download-screen.png)
+click Download cuDNN v6.0 (April 27, 2017), for CUDA 8.0
+click cuDNN v6.0 Runtime Library for Ubuntu16.04 (Deb)
+download libcudnn6_6.0.21-1+cuda8.0_amd64.deb 
+upload to aws instance:
+scp /home/jhancock2010/Downloads/tesnsorflow/cuda/libcudnn6_6.0.21-1+cuda8.0_amd64.deb ubuntu@ec2-54-158-66-128.compute-1.amazonaws.com:/home/ubuntu/
+install:
+sudo dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb

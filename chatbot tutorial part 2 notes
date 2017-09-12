@@ -1,0 +1,8 @@
+# got warning:
+# hdf5 is not supported on this machine (please install/reinstall h5py for optimal experience)
+# stack overflow has solution: https://stackoverflow.com/questions/39001457/hdf5-not-supported-please-install-reinstall-h5py-scipy-not-supported-when-imp
+
+# installed (in virtual environment) h5py:
+pip install h5py
+
+# did not see warning after that

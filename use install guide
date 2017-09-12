@@ -1,1 +1,25 @@
-https://www.tensorflow.org/install/install_linux
+use install guide at https://www.tensorflow.org/install/install_linux
+
+install TensorFlow with GPU support.
+
+install CUDA® Toolkit 8.0. 
+  browse to documentation link http://docs.nvidia.com/cuda/cuda-installation-guide-linux/#axzz4VZnqTJ2A
+  instance currently uses 16.0.4 Ubuntu:
+  cat /proc/version
+  Linux version 4.4.0-1022-aws (buildd@lgw01-54) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #31-Ubuntu SMP Tue Jun 27 11:27:55 UTC 2017
+  verify nVidia GPU:
+  lspci | grep -i nvidia
+    00:03.0 VGA compatible controller: NVIDIA Corporation GK104GL [GRID K520] (rev a1)
+  install kernel headers:
+  sudo apt-get install linux-headers-$(uname -r)
+  (these were already installed)
+  choose installation method - browse to: https://developer.nvidia.com/cuda-downloads
+    (see screenshot cuda-toolkit-download-page.png)
+    choose linux operating system, x86_64 architecture, ubuntu distribution, version 16.04, deb (network) install type
+    download the .deb by clicking button on web page, upload to aws instance:
+    scp /home/jhancock2010/Downloads/tesnsorflow/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb ubuntu@ec2-54-158-66-128.compute-1.amazonaws.com:/home/ubuntu/
+    use base installer instructions from nVidia web page:
+    `sudo dpkg -i cuda-repo-ubuntu1604_8.0.61-1_amd64.deb`
+    `sudo apt-get update`
+    `sudo apt-get install cuda`
+    

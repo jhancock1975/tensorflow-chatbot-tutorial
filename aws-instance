@@ -1,1 +1,8 @@
 
+ubuntu instance
+select g2.2xlarge instance
+no change on configure instance details
+64 GB root storage
+create Name tag / use any name
+use sg-fddb5995 quick-start-1 security group
+use aws-tensorflow key pair

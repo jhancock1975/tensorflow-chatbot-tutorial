@@ -46,3 +46,65 @@ pip install scipy
 # use jupyter new->text file
 # copy paste code from https://github.com/ugik/notebooks/blob/master/intents.json to new text file
 # rename new text file to intents.json, and save
+
+# got error in 3rd code block:
+#LookupErrorTraceback (most recent call last)
+#<ipython-input-6-9c033d4189cb> in <module>()
+#      7     for pattern in intent['patterns']:
+#      8         # tokenize each word in the sentence
+#----> 9         w = nltk.word_tokenize(pattern)
+#     10         # add to our words list
+#     11         words.extend(w)
+#
+#/home/ubuntu/tensorflow-pip-install/local/lib/python2.7/site-packages/nltk/tokenize/__init__.pyc in word_tokenize(text, language, preserve_line)
+#    128     :type preserver_line: bool
+#    129     """
+#--> 130     sentences = [text] if preserve_line else sent_tokenize(text, language)
+#    131     return [token for sent in sentences
+#    132             for token in _treebank_word_tokenizer.tokenize(sent)]
+#
+#/home/ubuntu/tensorflow-pip-install/local/lib/python2.7/site-packages/nltk/tokenize/__init__.pyc in sent_tokenize(text, language)
+#     94     :param language: the model name in the Punkt corpus
+#     95     """
+#---> 96     tokenizer = load('tokenizers/punkt/{0}.pickle'.format(language))
+#     97     return tokenizer.tokenize(text)
+#     98 
+#
+#/home/ubuntu/tensorflow-pip-install/local/lib/python2.7/site-packages/nltk/data.pyc in load(resource_url, format, cache, verbose, logic_parser, fstruct_reader, encoding)
+#    812 
+#    813     # Load the resource.
+#--> 814     opened_resource = _open(resource_url)
+#    815 
+#    816     if format == 'raw':
+#
+#/home/ubuntu/tensorflow-pip-install/local/lib/python2.7/site-packages/nltk/data.pyc in _open(resource_url)
+#    930 
+#    931     if protocol is None or protocol.lower() == 'nltk':
+#--> 932         return find(path_, path + ['']).open()
+#    933     elif protocol.lower() == 'file':
+#    934         # urllib might not use mode='rb', so handle this one ourselves:
+#
+#/home/ubuntu/tensorflow-pip-install/local/lib/python2.7/site-packages/nltk/data.pyc in find(resource_name, paths)
+#    651     sep = '*' * 70
+#    652     resource_not_found = '\n%s\n%s\n%s' % (sep, msg, sep)
+#--> 653     raise LookupError(resource_not_found)
+#    654 
+#    655 
+#
+#LookupError: 
+#**********************************************************************
+#  Resource u'tokenizers/punkt/english.pickle' not found.  Please
+#  use the NLTK Downloader to obtain the resource:  >>>
+#  nltk.download()
+#  Searched in:
+#    - '/home/ubuntu/nltk_data'
+#    - '/usr/share/nltk_data'
+#    - '/usr/local/share/nltk_data'
+#    - '/usr/lib/nltk_data'
+#    - '/usr/local/lib/nltk_data'
+#    - u''
+#**********************************************************************
+# stack overflow has solution: https://stackoverflow.com/questions/26570944/resource-utokenizers-punkt-english-pickle-not-found
+# added line: nltk.download('punkt') to resolve
+
+

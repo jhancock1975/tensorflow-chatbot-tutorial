@@ -1,0 +1,6 @@
+# install jupyter in virtual environment
+pip install jupyter
+# validate install
+# optional, add links sudo apt install links
+jupyter notebook
+# should see terminal based browser with jupyter home page

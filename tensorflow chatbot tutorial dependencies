@@ -107,4 +107,17 @@ pip install scipy
 # stack overflow has solution: https://stackoverflow.com/questions/26570944/resource-utokenizers-punkt-english-pickle-not-found
 # added line: nltk.download('punkt') to resolve
 
+# note - command output is slightly different from what is in tutorial
+# our output:
+# [nltk_data] Downloading package punkt to /home/ubuntu/nltk_data...
+# [nltk_data]   Unzipping tokenizers/punkt.zip.
+# (27, 'documents')
+# (9, 'classes', [u'goodbye', u'greeting', u'hours', u'mopeds', u'opentoday', u'payments', u'rental', u'thanks', u'today'])
+# (48, 'unique stemmed words', [u"'d", u"'s", u'a', u'acceiv', u'anyon', u'ar', u'bye', u'can', u'card', u'cash', u'credit', u'day', u'do', u'doe', u'good', u'goodby', u'hav', u'hello', u'help', u'hi', u'hour', u'how', u'i', u'is', u'kind', u'lat', u'lik', u'mastercard', u'mop', u'of', u'on', u'op', u'rent', u'see', u'tak', u'thank', u'that', u'ther', u'thi', u'to', u'today', u'we', u'what', u'when', u'which', u'work', u'yo', u'you'])
 
+# tutorial output:
+#27 documents
+# 9 classes ['goodbye', 'greeting', 'hours', 'mopeds', 'opentoday', 'payments', 'rental', 'thanks', 'today']
+# 44 unique stemmed words ["'d", 'a', 'ar', 'bye', 'can', 'card', 'cash', 'credit', 'day', 'do', 'doe', 'good', 'goodby', 'hav', 'hello', 'help', 'hi', 'hour', 'how', 'i', 'is', 'kind', 'lat', 'lik', 'mastercard', 'mop', 'of', 'on', 'op', 'rent', 'see', 'tak', 'thank', 'that', 'ther', 'thi', 'to', 'today', 'we', 'what', 'when', 'which', 'work', 'you']
+
+# main thing is 48 unique stemmed words vs. 44 unique stemmed words

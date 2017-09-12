@@ -23,3 +23,17 @@ install CUDA® Toolkit 8.0.
     `sudo apt-get update`
     `sudo apt-get install cuda`
     
+    *****************************************************************************
+    *** Reboot your computer and verify that the NVIDIA graphics driver can   ***
+    *** be loaded.                                                            ***
+    *****************************************************************************
+ 
+  skip down to post installation actions
+  
+  add lines to ~/.bashrc:
+  
+  # add cuda toolkit to path
+  [[ ":$PATH:" != *":/usr/local/cuda-8.0/bin:"* ]] && PATH="/usr/local/cuda-8.0/bin:${PATH}"
+
+  not necessary to do commands regarding LD_LIBRARY_PATH when using this installation path
+  

@@ -1,1 +1,3 @@
-
+ssh with ubuntu pem to new instance
+ssh-keygen
+scp -i ~/Documents/aws-keys/aws-tensorflow.pem ./authorized_keys ubuntu@ec2-54-158-66-128.compute-1.amazonaws.com:/home/ubuntu/.ssh/authorized_keys

@@ -3,6 +3,7 @@ source tensorflow-pip-install/bin/activate
 
 #using code at https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077
 
+# running first block:
 # got error
 # ImportErrorTraceback (most recent call last)
 # <ipython-input-1-57755a599343> in <module>()
@@ -16,3 +17,32 @@ source tensorflow-pip-install/bin/activate
 # so install nltk:
 
 pip install nltk
+
+# after install new error
+#ImportErrorTraceback (most recent call last)
+#<ipython-input-2-57755a599343> in <module>()
+#      6 # things we need for Tensorflow
+#      7 import numpy as np
+#----> 8 import tflearn
+#      9 import tensorflow as tf
+#     10 import random
+
+# ImportError: No module named tflearn
+
+pip install tflearn
+
+# after install tflearn, got warning:
+# hdf5 is not supported on this machine (please install/reinstall h5py for optimal experience)
+# Scipy not supported!
+
+# so install scipy
+
+pip install scipy
+
+# no errors or warnings in first cell after that
+
+# create json intents file
+# copy code from https://github.com/ugik/notebooks/blob/master/intents.json
+# use jupyter new->text file
+# copy paste code from https://github.com/ugik/notebooks/blob/master/intents.json to new text file
+# rename new text file to intents.json, and save

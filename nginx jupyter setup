@@ -50,4 +50,16 @@ sudo vi /etc/nginx/sites-enabled
 # restart nginx 
 sudo service nginx restart
 
-# install supervisor
+# install supervisor; this setup is nice because it will start jupyter at boot time;
+# although, in the cloud instances are immutable so maybe only good for logging
+sudo apt-get install supervisor
+
+# verify install
+sudo supervisorctl
+# should see supverisor> prompt
+
+# create supervisor configuration file
+# for jupyter service:
+# use file at 
+
+

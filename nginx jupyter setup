@@ -22,7 +22,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 # configure nginx server location
-# use editor to find server block or use entire file: 
+# use editor to find server block or use file: https://github.com/jhancock1975/tf-chat-tut-config/blob/master/default
 sudo vi /etc/nginx/sites-enabled
 
 # after code
@@ -47,4 +47,7 @@ sudo vi /etc/nginx/sites-enabled
                 proxy_set_header Connection "upgrade";
                 proxy_read_timeout 86400;
         }
+# restart nginx 
+sudo service nginx restart
 
+# install supervisor

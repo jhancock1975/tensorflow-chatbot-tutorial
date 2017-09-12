@@ -1,0 +1,18 @@
+# add packages in virtual env
+source tensorflow-pip-install/bin/activate
+
+#using code at https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077
+
+# got error
+# ImportErrorTraceback (most recent call last)
+# <ipython-input-1-57755a599343> in <module>()
+#      1 # things we need for NLP
+#----> 2 import nltk
+#      3 from nltk.stem.lancaster import LancasterStemmer
+#      4 stemmer = LancasterStemmer()
+#      5 
+
+# ImportError: No module named nltk
+# so install nltk:
+
+pip install nltk

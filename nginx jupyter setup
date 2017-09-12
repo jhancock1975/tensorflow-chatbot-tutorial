@@ -1,0 +1,16 @@
+# browse to http://www.albertauyeung.com/post/setup-jupyter-nginx-supervisor/ for details
+# generate configuration
+jupyter notebook --generate-config
+
+# add lines to the end of the jupyter configuration file:
+
+echo "c.NotebookApp.base_url = '/notebook'" >> ~/.jupyter/jupyter_notebook_config.py
+
+# use python passwd to generate the hash for the password
+# you want to use to log in to jupyter
+# not a secure setup - creates site-wide account
+echo "c.NotebookApp.password = 'sha1:2828a54816ae:14581c8b67e5dedc9b407f83d360300ae3155dda'" >> ~/.jupyter/jupyter_notebook_config.py
+
+# set port and port retries
+echo "c.NotebookApp.port = 8888" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port_retries = 50" >> ~/.jupyter/jupyter_notebook_config.py

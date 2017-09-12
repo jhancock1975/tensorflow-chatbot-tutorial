@@ -60,6 +60,21 @@ sudo supervisorctl
 
 # create supervisor configuration file
 # for jupyter service:
-# use file at 
+# use file at https://github.com/jhancock1975/tf-chat-tut-config/blob/master/jupyter.conf
+scp jupyter.conf ubuntu@ec2-54-158-66-128.compute-1.amazonaws.com:/home/ubuntu
+
+# login to AWS instance, copy config file, create directory for logging etc., reload and update supervisor
+mkdir /home/ubuntu/supervisor-jupyter
+touch /home/ubuntu/supervisor-jupyter/jupyter-service.log
+
+sudo cp jupyter.conf /etc/supervisor/conf.d/
+
+sudo supervisorctl reread
+sudo supervisorctl update 
+
+# jupyter should be available at something like:
+http://ec2-54-158-66-128.compute-1.amazonaws.com/notebook
+
+
 
 

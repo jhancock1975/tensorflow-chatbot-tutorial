@@ -6,3 +6,15 @@
 pip install h5py
 
 # did not see warning after that
+# in 7th input cell, got error:
+#  File "<ipython-input-8-35acb16971ad>", line 36
+#    return print(random.choice(i['responses']))
+               ^
+# SyntaxError: invalid syntax
+# removed return from offending line
+
+# got big traceback, error in cell 8, top of stack is:
+# InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(1, 48), b.shape=(48, 8), m=1, n=8, k=48
+
+# stack overflow has solution: https://stackoverflow.com/questions/37337728/tensorflow-internalerror-blas-sgemm-launch-failed
+# closed/halted all notebooks open in jupyter code executed properly after that

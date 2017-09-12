@@ -14,3 +14,4 @@ source ~/tensorflow-pip-install/bin/activate
 easy_install -U pip
 #install tensorflow with gpu support:
 pip install --upgrade tensorflow-gpu  # for Python 2.7 and GPU
+pip install jupyter

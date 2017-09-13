@@ -4,6 +4,7 @@
 # In[1]:
 
 
+# This code is copied from https://chatbotsmagazine.com/contextual-chat-bots-with-tensorflow-4391749d0077 .
 # things we need for NLP
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
